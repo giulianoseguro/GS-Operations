@@ -228,9 +228,10 @@
                     <p class="mt-4 text-lg text-gray-600">Have a project in mind or want to learn more? Fill out the form below or connect with me on <a href="https://www.linkedin.com/in/giulianoseguro/" target="_blank" class="text-blue-600 underline font-medium hover:text-blue-700">LinkedIn</a>.</p>
                 </div>
 
-                <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-lg">
-                    <!-- The form action URL is now live. -->
-                    <form action="https://formspree.io/f/movwponw" method="POST">
+                <!-- This is the container for the form and the success message -->
+                <div id="contact-form-container" class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-lg">
+                    <!-- The form now has an ID so the script can target it -->
+                    <form id="contact-form" action="https://formspree.io/f/movwponw" method="POST">
                         <!-- Name Field -->
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
@@ -266,8 +267,49 @@
         </div>
     </footer>
 
+    <!-- ** NEW JAVASCRIPT SECTION ** -->
     <script>
+        // Set the current year in the footer
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle the contact form submission
+        var form = document.getElementById("contact-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var formContainer = document.getElementById("contact-form-container");
+          var data = new FormData(event.target);
+          
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              // If submission is successful, show the thank you message
+              formContainer.innerHTML = `
+                <div class="text-center">
+                    <svg class="h-16 w-auto mx-auto mb-4" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M10 40 C 30 10, 70 10, 90 40" stroke="#3B82F6" stroke-width="8" fill="none" stroke-linecap="round"/>
+                       <text x="20" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="40" fill="#1F2937">G</text>
+                       <text x="80" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="40" fill="#1F2937" text-anchor="end">S</text>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank you!</h3>
+                    <p class="text-gray-600">Your message has been sent successfully. I'll be in touch with you shortly.</p>
+                </div>
+              `;
+            } else {
+              // If there's an error, show an error message
+              formContainer.innerHTML = '<div class="text-center"><h3 class="text-2xl font-bold text-red-600 mb-2">Oops!</h3><p class="text-gray-600">There was a problem submitting your form. Please try again later.</p></div>';
+            }
+          }).catch(error => {
+            // Handle network errors
+            formContainer.innerHTML = '<div class="text-center"><h3 class="text-2xl font-bold text-red-600 mb-2">Oops!</h3><p class="text-gray-600">There was a problem submitting your form. Please check your connection and try again.</p></div>';
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 </html>
