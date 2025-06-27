@@ -223,7 +223,7 @@
         <!-- Contact Section with Live Form -->
         <section id="contact" class="bg-gray-100 py-20 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16 max-w-2xl mx-auto">
+                <div id="contact-intro" class="text-center mb-16 max-w-2xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Let's Build Something Great Together</h2>
                     <p class="mt-4 text-lg text-gray-600">Have a project in mind or want to learn more? Fill out the form below or connect with me on <a href="https://www.linkedin.com/in/giulianoseguro/" target="_blank" class="text-blue-600 underline font-medium hover:text-blue-700">LinkedIn</a>.</p>
                 </div>
@@ -278,6 +278,7 @@
         async function handleSubmit(event) {
           event.preventDefault();
           var formContainer = document.getElementById("contact-form-container");
+          var contactIntro = document.getElementById("contact-intro");
           var data = new FormData(event.target);
           
           fetch(event.target.action, {
@@ -288,7 +289,8 @@
             }
           }).then(response => {
             if (response.ok) {
-              // If submission is successful, show the thank you message
+              // If submission is successful, hide the intro and show the thank you message
+              contactIntro.style.display = 'none';
               formContainer.innerHTML = `
                 <div class="text-center">
                     <svg class="h-16 w-auto mx-auto mb-4" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
