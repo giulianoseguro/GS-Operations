@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
         .s-curve {
             position: absolute;
@@ -28,6 +29,13 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        .choice-card {
+            transition: all 0.3s ease;
+        }
+        .choice-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -37,7 +45,6 @@
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo and Name -->
             <a href="#" class="flex items-center space-x-3">
-                <!-- SVG Logo: The Bridge -->
                 <svg class="h-10 w-auto" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
                    <path d="M10 40 C 30 10, 70 10, 90 40" stroke="#3B82F6" stroke-width="8" fill="none" stroke-linecap="round"/>
                    <text x="20" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="40" fill="#1F2937">G</text>
@@ -48,8 +55,8 @@
             
             <!-- CTA Button -->
             <div>
-                <a href="#contact" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700">
-                    Get In Touch
+                <a href="#free-consultation" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700">
+                    Book a Free Call
                 </a>
             </div>
         </nav>
@@ -62,137 +69,105 @@
             <div class="s-curve"></div>
             <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                    Big Tech Strategy.<br>Small Business Results.
+                    Expert Guidance for<br>Your Business and Your Journey.
                 </h1>
                 <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    I help small and medium businesses implement world-class operational frameworks to scale efficiently, boost profitability, and unlock new growth opportunities.
+                    I provide world-class operational strategy for growing businesses and personalized relocation support for professionals moving to the U.S.
                 </p>
-                <div class="mt-10 flex justify-center gap-4">
-                    <a href="#services" class="cta-button bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700">
-                        My Services
-                    </a>
-                    <a href="#proof" class="cta-button bg-gray-200 text-gray-800 font-semibold px-8 py-3 rounded-lg hover:bg-gray-300">
-                        View My Results
-                    </a>
-                </div>
             </div>
         </section>
 
-        <!-- Unique Value Proposition -->
-        <section id="why-me" class="py-20 md:py-28">
+        <!-- ** NEW ** Audience Choice Section -->
+        <section id="audience" class="py-20 md:py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Your Strategic Advantage</h2>
-                    <p class="mt-4 text-lg text-gray-600">Why partner with GS Operations?</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Who I Help</h2>
+                    <p class="mt-4 text-lg text-gray-600">Select the path that best describes you.</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <!-- Card 1: Big Tech Expertise -->
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <!-- Business Card -->
+                    <a href="#business-services" class="choice-card block bg-white p-10 rounded-xl shadow-md text-center">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Elite Operational Frameworks</h3>
-                        <p class="text-gray-600">Leverage proven strategies from leading tech innovators. I implement scalable systems for everything from GTM and finance to customer support and partner programs.</p>
-                    </div>
-                    <!-- Card 2: Financial Acumen -->
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3">For Your Business</h3>
+                        <p class="text-gray-600 mb-6">You're a founder or leader looking to scale your company with proven operational strategies.</p>
+                        <span class="font-semibold text-blue-600">View Business Services &rarr;</span>
+                    </a>
+                    <!-- Individual Card -->
+                    <a href="#individual-services" class="choice-card block bg-white p-10 rounded-xl shadow-md text-center">
+                        <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.789-2.756 9.348a.5.5 0 00.812.563A10.001 10.001 0 0022 11c0-5.523-4.477-10-10-10S2 5.477 2 11c0 2.136.67 4.122 1.83 5.756a.5.5 0 00.812-.563A10.005 10.005 0 0112 11z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Profit-Focused Results</h3>
-                        <p class="text-gray-600">Operations are only useful if they drive profitability. With a background managing a $1B revenue program and deep financial analysis, I connect every process improvement directly to your bottom line.</p>
-                    </div>
-                    <!-- Card 3: Relocation Support -->
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                           <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.789-2.756 9.348a.5.5 0 00.812.563A10.001 10.001 0 0022 11c0-5.523-4.477-10-10-10S2 5.477 2 11c0 2.136.67 4.122 1.83 5.756a.5.5 0 00.812-.563A10.005 10.005 0 0112 11z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">U.S. Relocation for Professionals</h3>
-                        <p class="text-gray-600">Having personally navigated the complex journey of relocating to the U.S. for work, I offer firsthand guidance to make your transition seamless and successful.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Proof Section -->
-        <section id="proof" class="bg-white py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Proven, Quantifiable Results</h2>
-                    <p class="mt-4 text-lg text-gray-600">I deliver outcomes, not just reports. Here’s a snapshot of what I’ve achieved for world-class teams.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center bg-gray-50 p-8 rounded-lg">
-                        <p class="text-5xl font-bold text-blue-600">3x</p>
-                        <p class="mt-2 text-lg font-semibold">Incentive Program ROI</p>
-                        <p class="mt-2 text-gray-600">Overhauled a global partner incentive program, increasing ROI from 0.5x to 3x in one quarter through strategic renegotiations.</p>
-                    </div>
-                    <div class="text-center bg-gray-50 p-8 rounded-lg">
-                        <p class="text-5xl font-bold text-blue-600">80%</p>
-                        <p class="mt-2 text-lg font-semibold">Cost Reduction</p>
-                        <p class="mt-2 text-gray-600">Developed financial models and dashboards for a major fiber-optic network that delivered better visibility and reduced costs by 80%.</p>
-                    </div>
-                    <div class="text-center bg-gray-50 p-8 rounded-lg">
-                        <p class="text-5xl font-bold text-blue-600">30%</p>
-                        <p class="mt-2 text-lg font-semibold">Reduced Escalations</p>
-                        <p class="mt-2 text-gray-600">Restructured a leading cloud platform's partner support system, decreasing escalations by 30% in just two months.</p>
-                    </div>
+                        <h3 class="text-2xl font-bold mb-3">For Individuals</h3>
+                        <p class="text-gray-600 mb-6">You're a professional relocating to the United States and need expert guidance for a smooth transition.</p>
+                        <span class="font-semibold text-green-600">View Relocation Services &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 md:py-28">
+        <!-- ** NEW ** Business Services Section -->
+        <section id="business-services" class="py-20 md:py-28 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16 max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">How I Can Help</h2>
-                    <p class="mt-4 text-lg text-gray-600">I offer tailored consulting services for businesses and individuals, focused on growth and efficiency.</p>
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-sm font-bold uppercase text-blue-600 tracking-widest">Services for Your Business</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">Applying Big Tech Frameworks to Drive Your Growth</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white p-8 rounded-xl shadow-md flex items-start">
-                        <div class="flex-shrink-0 mr-6">
-                             <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">End-to-End Business Strategy</h3>
-                            <p class="text-gray-600">From ideation to daily operations, I provide comprehensive consulting for every stage of your business, building a roadmap for sustainable, long-term growth.</p>
-                        </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Service 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl flex flex-col">
+                        <h3 class="text-xl font-semibold mb-2">End-to-End Business Strategy</h3>
+                        <p class="text-gray-600 flex-grow">From ideation to daily operations, I provide comprehensive consulting for every stage of your business, building a roadmap for sustainable, long-term growth.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-md flex items-start">
-                        <div class="flex-shrink-0 mr-6">
-                             <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">AI Automation & Scaling</h3>
-                            <p class="text-gray-600">Go beyond buzzwords. I help you identify high-impact opportunities to leverage AI, automating key workflows and processes to scale your business operations intelligently.</p>
-                        </div>
+                     <!-- Service 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl flex flex-col">
+                        <h3 class="text-xl font-semibold mb-2">AI Automation & Scaling</h3>
+                        <p class="text-gray-600 flex-grow">Go beyond buzzwords. I help you identify high-impact opportunities to leverage AI, automating key workflows and processes to scale your business operations intelligently.</p>
                     </div>
-                     <div class="bg-white p-8 rounded-xl shadow-md flex items-start">
-                        <div class="flex-shrink-0 mr-6">
-                             <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.494h18"></path></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Profit-Focused Operations</h3>
-                            <p class="text-gray-600">I dive deep into your P&L and processes to build a lean, effective operational engine. We’ll apply proven big-tech frameworks to cut waste, improve ROI, and scale efficiently.</p>
-                        </div>
+                     <!-- Service 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl flex flex-col">
+                        <h3 class="text-xl font-semibold mb-2">Profit-Focused Operations</h3>
+                        <p class="text-gray-600 flex-grow">I dive deep into your P&L and processes to build a lean, effective operational engine. We’ll apply proven big-tech frameworks to cut waste, improve ROI, and scale efficiently.</p>
                     </div>
-                     <div class="bg-white p-8 rounded-xl shadow-md flex items-start">
-                        <div class="flex-shrink-0 mr-6">
-                             <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 4.293a1 1 0 010 1.414L5.414 8l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zM16.293 4.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L18.586 8l-2.293-2.293a1 1 0 010-1.414z"></path></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">U.S. Relocation & Onboarding Support</h3>
-                            <p class="text-gray-600">For professionals moving to the U.S. I provide practical guidance on navigating visas, housing, banking, and cultural adaptation, ensuring a smooth start to your new chapter.</p>
-                        </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="#free-consultation" class="cta-button bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700">
+                        Book a Business Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ** NEW ** Individual Services Section -->
+        <section id="individual-services" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-sm font-bold uppercase text-green-600 tracking-widest">Services for Individuals</h2>
+                    <p class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">Your Partner for a Successful U.S. Relocation</p>
+                    <p class="mt-4 text-lg text-gray-600">As someone who has personally navigated this journey, I provide practical, firsthand support to ensure your professional and personal transition to the United States is seamless and stress-free.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-xl flex flex-col shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Pre-Arrival Logistics</h3>
+                        <p class="text-gray-600 flex-grow">Guidance on visa processes, document preparation, and creating a realistic budget and timeline before you move.</p>
                     </div>
+                     <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-xl flex flex-col shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Onboarding & Settling In</h3>
+                        <p class="text-gray-600 flex-grow">Step-by-step help with opening bank accounts, securing housing, understanding credit scores, and navigating healthcare.</p>
+                    </div>
+                     <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-xl flex flex-col shadow-md">
+                        <h3 class="text-xl font-semibold mb-2">Cultural & Professional Integration</h3>
+                        <p class="text-gray-600 flex-grow">Support for adapting to the U.S. workplace culture, networking effectively, and building your new community.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="#free-consultation" class="cta-button bg-green-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-700">
+                        Book an Introductory Call
+                    </a>
                 </div>
             </div>
         </section>
@@ -220,35 +195,41 @@
             </div>
         </section>
 
+        <!-- Free Consultation CTA Section -->
+        <section id="free-consultation" class="bg-blue-700 text-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Unlock Your Growth Potential?</h2>
+                <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                    Let's talk. I offer a complimentary, no-obligation 30-minute session to discuss your challenges and identify immediate opportunities for improvement.
+                </p>
+                <a href="https://calendly.com/giulianoseguro/30min" target="_blank" class="cta-button bg-white text-blue-700 font-bold px-10 py-4 rounded-lg hover:bg-gray-100 text-lg shadow-xl inline-block">
+                    Book Your Free Session Now
+                </a>
+            </div>
+        </section>
+
         <!-- Contact Section with Live Form -->
         <section id="contact" class="bg-gray-100 py-20 md:py-28">
             <div class="container mx-auto px-6">
-                <!-- ** EDITED: Added an ID to this div ** -->
                 <div id="contact-intro" class="text-center mb-16 max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Let's Build Something Great Together</h2>
-                    <p class="mt-4 text-lg text-gray-600">Have a project in mind or want to learn more? Fill out the form below or connect with me on <a href="https://www.linkedin.com/in/giulianoseguro/" target="_blank" class="text-blue-600 underline font-medium hover:text-blue-700">LinkedIn</a>.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a General Question?</h2>
+                    <p class="mt-4 text-lg text-gray-600">For general inquiries, feel free to send me a message below or connect with me on <a href="https://www.linkedin.com/in/giulianoseguro/" target="_blank" class="text-blue-600 underline font-medium hover:text-blue-700">LinkedIn</a>.</p>
                 </div>
 
-                <!-- This is the container for the form and the success message -->
                 <div id="contact-form-container" class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-lg">
-                    <!-- The form now has an ID so the script can target it -->
                     <form id="contact-form" action="https://formspree.io/f/movwponw" method="POST">
-                        <!-- Name Field -->
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
                             <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
                         </div>
-                        <!-- Email Field -->
                         <div class="mb-6">
                             <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
                             <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required>
                         </div>
-                        <!-- Message Field -->
                         <div class="mb-6">
                             <label for="message" class="block text-gray-700 font-semibold mb-2">How can I help you?</label>
                             <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition" required></textarea>
                         </div>
-                        <!-- Submit Button -->
                         <div class="text-center">
                             <button type="submit" class="cta-button w-full bg-blue-600 text-white font-bold px-10 py-4 rounded-lg hover:bg-blue-700 text-lg">
                                 Send Message
@@ -268,18 +249,14 @@
         </div>
     </footer>
 
-    <!-- ** EDITED JAVASCRIPT SECTION ** -->
     <script>
-        // Set the current year in the footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Handle the contact form submission
         var form = document.getElementById("contact-form");
         
         async function handleSubmit(event) {
           event.preventDefault();
           var formContainer = document.getElementById("contact-form-container");
-          // ** EDITED: Get the intro text element by its new ID **
           var contactIntro = document.getElementById("contact-intro");
           var data = new FormData(event.target);
           
@@ -291,10 +268,7 @@
             }
           }).then(response => {
             if (response.ok) {
-              // ** EDITED: Hide the intro text on success **
               contactIntro.style.display = 'none';
-              
-              // If submission is successful, show the thank you message
               formContainer.innerHTML = `
                 <div class="text-center">
                     <svg class="h-16 w-auto mx-auto mb-4" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
@@ -307,11 +281,9 @@
                 </div>
               `;
             } else {
-              // If there's an error, show an error message
               formContainer.innerHTML = '<div class="text-center"><h3 class="text-2xl font-bold text-red-600 mb-2">Oops!</h3><p class="text-gray-600">There was a problem submitting your form. Please try again later.</p></div>';
             }
           }).catch(error => {
-            // Handle network errors
             formContainer.innerHTML = '<div class="text-center"><h3 class="text-2xl font-bold text-red-600 mb-2">Oops!</h3><p class="text-gray-600">There was a problem submitting your form. Please check your connection and try again.</p></div>';
           });
         }
